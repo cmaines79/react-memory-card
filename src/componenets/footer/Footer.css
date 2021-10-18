@@ -1,0 +1,12 @@
+footer {
+  height: var(--size-footer-height);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--color-red);
+  color: white;
+}
+
+footer p {
+  margin: 0 50px;
+}

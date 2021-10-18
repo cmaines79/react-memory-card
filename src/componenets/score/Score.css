@@ -1,0 +1,12 @@
+.score {
+  height: var(--size-score-height);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.score p {
+  margin: 0 6.25rem;
+  font-size: 1.125rem;
+  font-weight: bold;
+}

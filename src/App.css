@@ -1,0 +1,37 @@
+/* CSS Variables */
+:root {
+  /* sizes */
+  --size-header-height: 6.25rem;
+  --size-score-height: 3.125rem;
+  --size-footer-height: 3.125rem;
+
+  /* colors */
+  --color-red: #d82f0a;
+  --color-tan: #fdd66a;
+}
+
+/* Global Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Ubuntu', sans-serif;
+}
+
+#root {
+  display: flex;
+  width: 100vw;
+  background-color: var(--color-tan);
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.container {
+  width: 75rem;
+  display: flex;
+  margin: 0 auto;
+}
