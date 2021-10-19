@@ -1,12 +1,22 @@
-.score {
+.scoring {
   height: var(--size-score-height);
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.score p {
-  margin: 0 6.25rem;
-  font-size: 1.125rem;
+.score,
+.high-score {
+  display: flex;
+  margin: 0 0.625rem;
+}
+
+.score p,
+.high-score p {
+  margin: 3px;
+}
+
+#play-again {
+  color: #d82f0a;
   font-weight: bold;
 }

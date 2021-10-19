@@ -1,12 +1,23 @@
 // importing stylesheet
 import './Score.css'
 
-const Score = () => {
+const Score = ( { score, highScore }) => {
     return (
-        <div className="score">
-            <p id="score">Score: </p>
-            <p id="high-score">High Score: </p>
+        <div className="scoring">
+            <div className="score">
+            <p>Score: </p>
+            <p>{score}</p>
+            </div>
+            <div className="high-score">
+            <p>High Score: </p>
+            <p>{highScore}</p>
+            </div>
+            <div className="play-agin">
+                <p id="play-again"></p>
+            </div>
+            
         </div>
+        
     )
 }
 

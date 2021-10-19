@@ -80,12 +80,35 @@ function App() {
 ]
   //states
   const [cards, setCards] = useState(characters);
+  const [score, setScore] = useState(0);
+  const [highScore, setHighScore] = useState(0);
+
+  // supporting functions
+  const updateScore = (val) => {
+    (val === 1) ? setScore(score + 1) : setScore(0);
+  }
+
+  const updateHighScore = (val) => {
+    setHighScore(val);
+  }
+
+  const shuffle = (a) => {
+    for (let i = a.length - 1; i > 0; i--){
+      const j = Math.floor(Math.random() * (i + 1));
+      [a[i], a[j]] = [a[j], a[i]];
+    }
+    return a;
+  }
+
+  const shuffleCards = () => {
+    setCards(shuffle(cards));
+  }
 
   return (
     <div className="app">
       <Header />
-      <Score />
-      <Game cards={cards} />
+      <Score score={score} highScore={highScore}/>
+      <Game cards={cards} shuffleCards={shuffleCards} updateScore={updateScore} updateHighScore={updateHighScore} score={score} highScore={highScore} />
       <Footer />
     </div>
   );
